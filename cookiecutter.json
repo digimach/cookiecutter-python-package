@@ -1,0 +1,15 @@
+{
+  "project_title": "",
+  "project_slug": "",
+  "project_short_description": "",
+  "project_support_email": "",
+  "project_support_name": "",
+  "project_source_url": "",
+  "project_doc_url": "",
+  "install_requires": "",
+  "project_extra_dev_requires": "yapf",
+  "project_extra_test_requires": "coverage, flake8, pylint, pytest, pytest-cov",
+  "project_license": [ "BSD license", "MIT license", "Apache Software License 2.0", "GNU General Public License v3", "Python Software Foundation License (PSFL)", "Proprietary" ],
+  "project_python_version": [ "3.9", "3.8", "3.7", "3.6" ],
+  "tox_work_dir": "/tmp/"
+}
