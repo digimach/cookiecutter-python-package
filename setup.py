@@ -30,8 +30,8 @@ setup(
     install_requires=[''],
     extras_require={
         "test": [
-            'cookiecutter', 'coverage', 'flake8', 'pylint', 'pytest',
-            'pytest-cookies', 'pytest-cov', 'pyyaml', 'tox', 'yapf'
+            'cookiecutter', 'coverage', 'flake8', 'gitpython', 'pylint',
+            'pytest', 'pytest-cookies', 'pytest-cov', 'pyyaml', 'tox', 'yapf'
         ],
         "dev": []
     },

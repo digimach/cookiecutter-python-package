@@ -14,6 +14,10 @@ Usage
 3. The `Project Variables`_ section defines the Cookiecutter variables that will
    be prompted and used to configure the generated project.
 
+4. If you want to work in a Git repository for the generated project see
+   `Git Repository`_.
+
+
 .. _`Project Variables`:
 
 Project Variables
@@ -51,3 +55,32 @@ Project Variables
 
     * :code:`project_extra_test_requires`: List of Python packages, in CSV form,
       that are required to test the generated project.
+
+    * :code:`initialize_git_repo`: If true, will setup a Git repository in the
+      generated project and do an initial commit. You can amend the initial
+      commit or add on top. See `Git Repository`_ for more information.
+
+.. _`Git Repository`:
+
+Git Repository
+--------------
+
+If :code:`initialize_git_repo` is :code:`yes` (the default) a Git repository will be initialized in
+the target repository. This will also do a commit for you which you can then
+amend or add on top. This allows you to diff against the templated project with
+your own work.
+
+You just have to add the remote to push the Git repository::
+
+    git remote add origin <repo url>
+
+If you chose :code:`initialize_git_repo` to be :code:`no` you can initialize
+the Git repository in your templated project:
+
+.. code-block::
+
+    git init
+    git add --all
+    git remote add origin <repo url>
+    git push
+
