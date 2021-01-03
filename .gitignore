@@ -1,0 +1,11 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest files and directories
+/.pytest_tmp/
+
+# IDE files and directories
+/.vscode/
+/.vs/

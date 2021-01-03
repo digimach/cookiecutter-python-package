@@ -1,0 +1,15 @@
+The CREDIT file gives authors and copyright holders the credit for providing
+inspiration and design ideas. The author wants to acknowledge their
+contribution but maintains copyright as per the LICENSE file.
+
+LICENSES used in the project derivation ("generated project") except for
+Proprietary License are templated from the following sources and are 
+compatible with BSD-3-Clause license: 
+    1. Choose A License https://choosealicense.com
+    2. Open Source Initiative https://opensource.org/
+
+Proprietary license was written after consulting:
+    1. M., S. L. (2004). Chapter 5: Non-Open Source Licenses. In Understanding open source & free software licensing (pp. 114-146). Sebastopol (Calif.): O'Reilly.
+
+Some parts of the code's design have been inspired from the following sources:
+    1. audreyfeldroy/cookiecutter-pypackage https://github.com/audreyfeldroy/cookiecutter-pypackage
