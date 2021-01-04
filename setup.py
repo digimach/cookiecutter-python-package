@@ -25,12 +25,15 @@ setup(
         "Topic :: Software Development :: Code Generators",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3 :: Only"
     ],
     packages=find_packages(exclude=("tests", )),
     include_package_data=True,
-    python_requires=">=3.9",
+    python_requires=">=3.6",
     install_requires=[''],
     extras_require={
         "test": [

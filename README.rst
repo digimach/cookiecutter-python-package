@@ -2,7 +2,7 @@
 Cookiecutter Python Package
 ======================
 
-.. image:: https://github.com/Digimach/cookiecutter-python-package/workflows/tests/badge.svg?branch=master&event=push
+.. image:: https://github.com/Digimach/cookiecutter-python-package/workflows/tests/badge.svg?branch=master
     :target: https://github.com/Digimach/cookiecutter-python-package/actions?query=workflow%3Atests+event%3Apush+branch%3Amaster
     :alt: Test Status
 

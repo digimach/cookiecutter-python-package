@@ -7,14 +7,15 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Python Tox on Fedora
+      - name: Run tox based tests
         uses: fedora-python/tox-github-action@v0.4
         with:
-          # Tox environment to run the tests on
-          tox_env: py39
-  
+          tox_env: ${{ matrix.tox_env }}
+    strategy:
+      matrix:
+        tox_env: [py36, py37, py38, py39]
