@@ -30,7 +30,8 @@ def initialize_git_repo():
     commit_message = ("Initial commit - Generated project from cookiecutter"
                       " template.\n\n"
                       "Template created from"
-                      " https://github.com/Digimach/cookiecutter-pypackage")
+                      " https://github.com/Digimach/cookiecutter-python-"
+                      "package")
 
     author_info = "{{ cookiecutter.project_author_name }}"
     author_info += " <{{cookiecutter.project_author_email }}>"

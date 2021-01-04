@@ -6,12 +6,12 @@ setup.py for Cookiecutter template project.
 from setuptools import find_packages, setup
 
 setup(
-    name="digimach-cookiecutter-pypackage",
+    name="cookiecutter-python-package",
     version="0.1.0",
-    url="https://github.com/Digimach/cookiecutter-pypackage",
+    url="https://github.com/Digimach/cookiecutter-python-package",
     project_urls={
-        "Code": "https://github.com/Digimach/cookiecutter-pypackage",
-        "Documentation": "https://github.com/Digimach/cookiecutter-pypackage"
+        "Code": "https://github.com/Digimach/cookiecutter-python-package",
+        "Documentation": "https://github.com/Digimach/cookiecutter-python-package"
     },
     license="BSD-3-Clause",
     author="Digimach",

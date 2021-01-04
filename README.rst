@@ -1,5 +1,5 @@
 ======================
-Cookiecutter PyPackage
+Cookiecutter Python Package
 ======================
 
 .. image:: https://github.com/Digimach/cookiecutter-python-package/workflows/tests/badge.svg?branch=master&event=push
