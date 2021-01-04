@@ -6,6 +6,14 @@ Cookiecutter PyPackage
     :target: https://github.com/Digimach/cookiecutter-python-package/actions?query=workflow%3Atests+event%3Apush+branch%3Amaster
     :alt: Test Status
 
+Cookiecutter_ template for a Python package.
+
+* GitHub repo: https://github.com/Digimach/cookiecutter-python-package
+* Documentation: https://github.com/Digimach/cookiecutter-python-package/blob/master/README.rst
+* Free software: BSD license
+
+.. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
+
 Usage
 -----
 
