@@ -22,20 +22,33 @@ def initialize_git_repo():
                             shell=True,
                             cwd=PROJECT_DIRECTORY)
 
-    commit_message = ("Initial commit - Generated project from cookiecutter"
-                      " template.\n\n"
-                      "Template created from"
-                      " https://github.com/Digimach/cookiecutter-pypackage")
-
     subprocess.check_output("git add --all",
                             stderr=subprocess.STDOUT,
                             shell=True,
                             cwd=PROJECT_DIRECTORY)
 
-    subprocess.check_output(f'git commit -m "{commit_message}"',
-                            stderr=subprocess.STDOUT,
-                            shell=True,
-                            cwd=PROJECT_DIRECTORY)
+    commit_message = ("Initial commit - Generated project from cookiecutter"
+                      " template.\n\n"
+                      "Template created from"
+                      " https://github.com/Digimach/cookiecutter-pypackage")
+
+    author_info = "{{ cookiecutter.project_author_name }}"
+    author_info += " <{{cookiecutter.project_author_email }}>"
+
+    env = os.environ.copy()
+    env['GIT_COMMITTER_NAME'] = "{{ cookiecutter.project_author_name }}"
+    env['GIT_COMMITTER_EMAIL'] = "{{ cookiecutter.project_author_email }}"
+
+    try:
+        subprocess.check_output((f'git commit --author "{author_info}"'
+                                 f' --message "{commit_message}"'),
+                                shell=True,
+                                cwd=PROJECT_DIRECTORY,
+                                env=env)
+    except subprocess.CalledProcessError as exc_info:
+        if exc_info.returncode != 0:
+            print(exc_info.output)
+        raise
 
 
 def set_license():
