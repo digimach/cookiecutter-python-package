@@ -17,6 +17,10 @@ setup-dev :
 pytest :
 	pytest -vvvv --strict-markers --basetemp=./.pytest_tmp/ $(PYTEST_FLAGS)
 
+.PHONY: safety
+safety :
+	safety check
+
 .PHONY: test
 test : pytest lint
 # -------------------
