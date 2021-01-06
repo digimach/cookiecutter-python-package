@@ -28,14 +28,16 @@ setup(
     description="{{ cookiecutter.project_short_description }}",
     long_description=__doc__,
     classifiers=[
-        "License :: {{ cookiecutter.project_license }}",
+        "License :: OSI Approved :: {{ cookiecutter.project_license }}",
         "Programming Language :: Python",
-        "Programming Language :: Python :: {{ cookiecutter.project_python_version }}",
+        {%- for py_version in cookiecutter.project_valid_python_versions.replace(" ", "").split(",") %}
+        "Programming Language :: Python :: {{ py_version }}",
+        {%- endfor %}
         "Programming Language :: Python :: 3 :: Only",
     ],
     packages=find_packages(exclude=("tests", )),
     include_package_data=True,
-    python_requires=">={{ cookiecutter.project_python_version }}",
+    python_requires=">={{ cookiecutter.project_python_min_version }}",
     install_requires={{
         cookiecutter.install_requires.replace(" ", "").split(',')
     }},
@@ -44,8 +46,9 @@ setup(
             cookiecutter.project_extra_test_requires.replace(" ",
                                                              "").split(',')
         }},
-        "dev":
-        {{cookiecutter.project_extra_dev_requires.replace(" ", "").split(',')}}
+        "dev": {{
+            cookiecutter.project_extra_dev_requires.replace(" ", "").split(',')
+        }}
     },
     zip_safe=False,
     platforms="any",

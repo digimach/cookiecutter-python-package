@@ -67,6 +67,18 @@ Project Variables
 
     * :code:`project_extra_test_requires`: List of Python packages, in CSV form,
       that are required to test the generated project.
+    
+    * :code:`project_python_max_version`: The maximum version of Python the
+      project will be supported on.
+
+    * :code:`project_python_min_version`: The minimum version of Python the
+      project will be supported on. Has to be lesser or equal than
+      :code:`project_python_max_version`. 
+
+    * :code:`project_valid_python_versions`: List of Python versions, in CSV
+      form, that are valid. This can be used to define the versions in between
+      :code:`project_python_min_version` and :code:`project_python_max_version`,
+      inclusive, that this project will be supported on.
 
     * :code:`initialize_git_repo`: If true, will setup a Git repository in the
       generated project and do an initial commit. You can amend the initial

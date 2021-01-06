@@ -1,0 +1,4 @@
+default_context:
+    project_slug: baked_cookie
+    project_author_name: Cookie Baker
+    project_author_email: baker@cookier.com
