@@ -38,8 +38,8 @@ setup(
     extras_require={
         "test": [
             'cookiecutter', 'coverage', 'flake8', 'gitpython', 'pylint',
-            'pytest', 'pytest-cookies', 'pytest-cov', 'pyyaml', 'safety',
-            'tox', 'yapf'
+            'pytest', 'pytest-cookies', 'pytest-cov', 'pytest-xdist', 'pyyaml',
+            'safety', 'tox', 'yapf'
         ],
         "dev": []
     },

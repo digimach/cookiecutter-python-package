@@ -15,7 +15,7 @@ setup-dev :
 # Test rules
 .PHONY: pytest
 pytest :
-	pytest -vvvv --strict-markers --basetemp=./.pytest_tmp/ $(PYTEST_FLAGS)
+	pytest -vvvv --strict-markers --basetemp=./.pytest_tmp/ --numprocesses=auto $(PYTEST_FLAGS)
 
 .PHONY: safety
 safety :
