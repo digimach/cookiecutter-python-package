@@ -37,7 +37,8 @@ def test_bake_selecting_license(cookies):
             else:
                 assert license in result.project.join('LICENSE').readlines()[0]
 
-            assert license in result.project.join('setup.py').read()
+            assert f"license = {license}" in result.project.join(
+                'setup.cfg').read()
 
             license_file = result.project.join('LICENSE').read()
             assert str("Cookie Baker") in license_file

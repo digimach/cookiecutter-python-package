@@ -14,30 +14,11 @@ import sys
 from setuptools import find_packages, setup
 from setuptools.command.test import test as TestCommand
 
+with open("src/{{ cookiecutter.project_slug | replace('-', '_') }}/__init__.py", encoding="utf8") as fp:
+    version = re.search(r'__version__ = "(.*?)"', fp.read()).group(1)
+
 setup(
-    name="{{ cookiecutter.project_slug | replace('_', '-') }}",
-    version="",
-    url="{{ cookiecutter.project_source_url }}",
-    project_urls={
-        "Code": "{{ cookiecutter.project_source_url }}",
-        "Documentation": "{{ cookiecutter.project_doc_url }}"
-    },
-    license="{{ cookiecutter.project_license }}",
-    author="{{ cookiecutter.project_author_name }}",
-    author_email="{{ cookiecutter.project_author_email }}",
-    description="{{ cookiecutter.project_short_description }}",
-    long_description=__doc__,
-    classifiers=[
-        "License :: OSI Approved :: {{ cookiecutter.project_license }}",
-        "Programming Language :: Python",
-        {%- for py_version in cookiecutter.project_valid_python_versions.replace(" ", "").split(",") %}
-        "Programming Language :: Python :: {{ py_version }}",
-        {%- endfor %}
-        "Programming Language :: Python :: 3 :: Only",
-    ],
-    packages=find_packages(exclude=("tests", )),
-    include_package_data=True,
-    python_requires=">={{ cookiecutter.project_python_min_version }}",
+    version=version,
     install_requires={{
         cookiecutter.install_requires.replace(" ", "").split(',')
     }},
