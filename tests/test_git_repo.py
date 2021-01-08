@@ -13,7 +13,7 @@ def test_git_repo_is_clean(cookies):
         assert result.project.isdir()
         repo = git.Repo(result.project)
         assert not repo.bare
-        assert not repo.is_dirty()
+        assert not repo.is_dirty(untracked_files=True)
 
 
 def test_no_git_repo(cookies):
