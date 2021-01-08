@@ -11,7 +11,11 @@ __pycache__/
 
 # Pytest files and directories
 /.pytest_tmp/
+/.pytest_cache/
 
 # IDE files and directories
 /.vscode/
 /.vs/
+
+# Cookiecutter baking directory
+/.baked/
