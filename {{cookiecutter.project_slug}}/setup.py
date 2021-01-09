@@ -6,15 +6,11 @@
 
 See README.md for more information.
 """
-import os
-import ast
 import re
-import sys
 
-from setuptools import find_packages, setup
-from setuptools.command.test import test as TestCommand
+from setuptools import setup
 
-with open("src/{{ cookiecutter.project_slug | replace('-', '_') }}/__init__.py", encoding="utf8") as fp:
+with open("src/{{ cookiecutter.project_slug }}/__init__.py", encoding="utf8") as fp:
     version = re.search(r'__version__ = "(.*?)"', fp.read()).group(1)
 
 setup(

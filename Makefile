@@ -13,6 +13,10 @@ setup-dev :
 # -------------------
 
 # Test rules
+.PHONY: bake
+bake :
+	cookiecutter --overwrite-if-exists --no-input --output-dir ./.baked --config-file ./tests/cookiecutter_test_user_config.yml .
+
 .PHONY: pytest
 pytest :
 	pytest -vvvv --strict-markers --basetemp=./.pytest_tmp/ --numprocesses=auto $(PYTEST_FLAGS)
@@ -27,15 +31,15 @@ test : pytest lint
 
 # Lint Check rules
 .PHONY: lint
-lint : flake8_check pylint_check yapf_check
+lint : bake flake8_check pylint_check yapf_check
 
 .PHONY: flake8_check
 flake8_check :
-	flake8 --max-line-length=80 --count --statistics *.py hooks 
+	flake8 --max-line-length=80 --count --statistics *.py hooks .baked/
 
 .PHONY: pylint_check
 pylint_check :
-	pylint --jobs 0 --extension-pkg-whitelist ujson,rapidjson *.py hooks 
+	pylint --jobs 0 --extension-pkg-whitelist ujson,rapidjson *.py hooks .baked/baked_cookie/setup.py .baked/baked_cookie/src/baked_cookie
 
 .PHONY: yapf_check
 yapf_check :
