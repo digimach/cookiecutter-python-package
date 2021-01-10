@@ -36,12 +36,13 @@ setup(
     python_requires=">=3.6",
     install_requires=[''],
     extras_require={
+        "dev": [],
+        "docs": ["safety", "sphinx"],
         "test": [
             'cookiecutter', 'coverage', 'flake8', 'gitpython', 'pylint',
             'pytest', 'pytest-cookies', 'pytest-cov', 'pytest-xdist', 'pyyaml',
-            'safety', 'tox', 'yapf'
-        ],
-        "dev": []
+            'restructuredtext-lint', 'safety', 'tox', 'yapf'
+        ]
     },
     zip_safe=False,
     platforms="any",
