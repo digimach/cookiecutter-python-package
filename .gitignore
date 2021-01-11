@@ -19,3 +19,6 @@ __pycache__/
 
 # Cookiecutter baking directory
 /.baked/
+
+# Docs build directory
+/docs/_build/

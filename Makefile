@@ -3,7 +3,8 @@ PYTEST_FLAGS=
 # Clean rules
 .PHONY: clean
 clean : 
-	git clean -fdX
+	git clean -dX --force 
+	rm -rf .baked/
 # -------------------
 
 # Setup rules for the dev environment
@@ -31,7 +32,7 @@ test : pytest lint
 
 # Lint Check rules
 .PHONY: lint
-lint : bake flake8_check pylint_check yapf_check
+lint : bake flake8_check pylint_check yapf_check rst_check
 
 .PHONY: flake8_check
 flake8_check :
@@ -44,10 +45,33 @@ pylint_check :
 .PHONY: yapf_check
 yapf_check :
 	yapf --recursive --parallel --verbose --diff .
+
+.PHONY: rst_check
+rst_check : 
+	rst-lint *.rst
 # -------------------
 
 # Formatting related rules
 .PHONY: yapf
 yapf:
 	yapf --recursive --in-place --parallel --verbose .
+# -------------------
+
+# Documentation Testing rules
+.PHONY: doc_test
+doc_test : doc_dry_run_test doc_link_check
+
+.PHONY: doc_dry_run_test 
+doc_dry_run_test :
+	make --directory=./docs SPHINXOPTS="-W -n --keep-going" html
+
+.PHONY: doc_link_check
+doc_link_check :
+	make --directory=./docs linkcheck
+# -------------------
+
+# Documentation build rules
+.PHONY: docs
+docs :
+	make --directory=./docs html
 # -------------------

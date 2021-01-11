@@ -1,23 +1,3 @@
-===========================
-Cookiecutter Python Package
-===========================
-
-.. image:: https://github.com/Digimach/cookiecutter-python-package/workflows/tests/badge.svg?branch=master
-    :target: https://github.com/Digimach/cookiecutter-python-package/actions?query=workflow%3Atests+event%3Apush+branch%3Amaster
-    :alt: Test Status
-
-.. image:: https://github.com/Digimach/cookiecutter-python-package/workflows/docs/badge.svg?branch=master
-    :target: https://github.com/Digimach/cookiecutter-python-package/actions?query=workflow%3Adocs+event%3Apush+branch%3Amaster
-    :alt: Documentation Status
-
-Cookiecutter_ template for a Python package.
-
-* GitHub repo: https://github.com/Digimach/cookiecutter-python-package
-* Documentation: https://github.com/Digimach/cookiecutter-python-package/blob/master/README.rst
-* Free software: BSD license
-
-.. contents::
-
 Quickstart
 ==========
 
@@ -120,4 +100,4 @@ the Git repository in your templated project later by doing:
     git push
 
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
-.. _YAPF: https://github.com/google/yapf
+.. _YPAF: https://github.com/google/yapf
