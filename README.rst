@@ -9,7 +9,7 @@ Cookiecutter Python Package
     :target: https://github.com/Digimach/cookiecutter-python-package/actions?query=workflow%3Atests+event%3Apush+branch%3Amaster
     :alt: Test Status
 
-.. image:: https://oss-docs.digimach.com/projects/cookiecutter-python-package/badge/?version=latest
+.. image:: https://readthedocs.org/projects/cookiecutter-python-package/badge/?version=latest
     :target: https://oss-docs.digimach.com/projects/cookiecutter-python-package/en/latest/?badge=latest
     :alt: Documentation Status
 
