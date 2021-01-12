@@ -1,6 +1,9 @@
 ===========================
 Cookiecutter Python Package
 ===========================
+.. image:: https://img.shields.io/pypi/pyversions/cookiecutter-python-package.svg
+    :target: https://pypi.org/project/cookiecutter-python-package/
+    :alt: Python Versions
 
 .. image:: https://github.com/Digimach/cookiecutter-python-package/workflows/tests/badge.svg?branch=master
     :target: https://github.com/Digimach/cookiecutter-python-package/actions?query=workflow%3Atests+event%3Apush+branch%3Amaster
@@ -10,6 +13,10 @@ Cookiecutter Python Package
     :target: https://github.com/Digimach/cookiecutter-python-package/actions?query=workflow%3Adocs+event%3Apush+branch%3Amaster
     :alt: Documentation Status
 
+.. image:: https://img.shields.io/scrutinizer/quality/g/digimach/cookiecutter-python-package.svg
+    :target: https://scrutinizer-ci.com/g/digimach/cookiecutter-python-package/?branch=master
+    :alt: Code Quality
+
 Cookiecutter_ template for a Python package.
 
 * GitHub repo: https://github.com/Digimach/cookiecutter-python-package
@@ -17,6 +24,15 @@ Cookiecutter_ template for a Python package.
 * Free software: BSD license
 
 .. contents::
+
+Features
+--------
+The following features apply to the template project of this Cookiecutter:
+
+* Tox testing: Test against multiple Python versions (3.6+)
+* Development: Easily setup a development environment using Tox
+* Makefile: Predefined make rules to build, test, lint and deploy
+* YAPF_ Formatting: Have your Python code formatted in a consistent manner
 
 Quickstart
 ==========
