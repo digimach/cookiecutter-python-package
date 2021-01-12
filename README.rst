@@ -26,7 +26,7 @@ Cookiecutter_ template for a Python package.
 .. contents::
 
 Features
---------
+========
 The following features apply to the template project of this Cookiecutter:
 
 * Tox testing: Test against multiple Python versions (3.6+)
