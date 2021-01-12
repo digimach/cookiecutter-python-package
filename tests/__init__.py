@@ -70,8 +70,7 @@ def subprocess_in_dir(command, dirpath=None):
     if dirpath is None:
         dirpath = os.getcwd()
 
-    with in_dir(dirpath):
-        return subprocess.check_call(shlex.split(command))
+    subprocess.check_call(shlex.split(command), cwd=dirpath)
 
 
 def load_cookiecutter_json():
