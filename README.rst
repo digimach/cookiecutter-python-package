@@ -9,8 +9,8 @@ Cookiecutter Python Package
     :target: https://github.com/Digimach/cookiecutter-python-package/actions?query=workflow%3Atests+event%3Apush+branch%3Amaster
     :alt: Test Status
 
-.. image:: https://github.com/Digimach/cookiecutter-python-package/workflows/docs/badge.svg?branch=master
-    :target: https://github.com/Digimach/cookiecutter-python-package/actions?query=workflow%3Adocs+event%3Apush+branch%3Amaster
+.. image:: https://oss-docs.digimach.com/projects/cookiecutter-python-package/badge/?version=latest
+    :target: https://oss-docs.digimach.com/projects/cookiecutter-python-package/en/latest/?badge=latest
     :alt: Documentation Status
 
 .. image:: https://img.shields.io/scrutinizer/quality/g/digimach/cookiecutter-python-package.svg
@@ -20,7 +20,7 @@ Cookiecutter Python Package
 Cookiecutter_ template for a Python package.
 
 * GitHub repo: https://github.com/Digimach/cookiecutter-python-package
-* Documentation: https://github.com/Digimach/cookiecutter-python-package/blob/master/README.rst
+* Documentation: https://oss-docs.digimach.com/projects/cookiecutter-python-package
 * Free software: BSD license
 
 .. contents::
