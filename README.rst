@@ -15,7 +15,12 @@ Cookiecutter Python Package
 
 .. image:: https://img.shields.io/scrutinizer/quality/g/digimach/cookiecutter-python-package.svg
     :target: https://scrutinizer-ci.com/g/digimach/cookiecutter-python-package/?branch=master
-    :alt: Code Quality
+    :alt: Scrutinizer
+
+.. image:: https://www.codefactor.io/repository/github/digimach/cookiecutter-python-package/badge
+   :target: https://www.codefactor.io/repository/github/digimach/cookiecutter-python-package
+   :alt: CodeFactor
+
 
 Cookiecutter_ template for a Python package.
 
