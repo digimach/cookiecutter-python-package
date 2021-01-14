@@ -2,12 +2,12 @@ Quickstart
 ==========
 
 This is a short summary of all the components this project provides along with
-basic examples. 
+basic examples.
 
 Usage
 -----
 
-1. Install :code:`cookiecutter` in your Python environment. Ex: 
+1. Install :code:`cookiecutter` in your Python environment. Ex:
    :code:`pip install cookiecutter`
 
 2. Use this template project to generate your project
@@ -27,7 +27,7 @@ Template Variables
 * :code:`project_title`: The title of the project that is being created.
 
 * :code:`project_slug`: The slug is used to give the Python package an
-  install name. This should be compliant with `PEP-0008: Package and Module 
+  install name. This should be compliant with `PEP-0008: Package and Module
   Names <https://www.python.org/dev/peps/pep-0008/#package-and-module-names>`_
 
 * :code:`project_short_description`: Project description that will be added
@@ -38,7 +38,7 @@ Template Variables
   for license generation and also published with the package in
   `setup.py <../../{{cookiecutter.project_slug}}/setup.py>`_
 
-* :code:`project_author_name`: The author name that will be used for 
+* :code:`project_author_name`: The author name that will be used for
   license generation and also published with the package in
   `setup.py <../../{{cookiecutter.project_slug}}/setup.py>`_
 
@@ -62,7 +62,7 @@ Template Variables
 
 * :code:`project_python_min_version`: The minimum version of Python the
   project will be supported on. Has to be lesser or equal than
-  :code:`project_python_max_version`. 
+  :code:`project_python_max_version`.
 
 * :code:`project_valid_python_versions`: List of Python versions, in CSV
   form, that are valid. This can be used to define the versions in between
