@@ -9,7 +9,7 @@ Licenses
 --------
 
 LICENSES used in the project derivation ("generated project") except for
-Proprietary License are templated from the following sources: 
+Proprietary License are templated from the following sources:
 
 1. `Choose A License <https://choosealicense.com>`_
 2. `Open Source Initiative <https://opensource.org>`_
