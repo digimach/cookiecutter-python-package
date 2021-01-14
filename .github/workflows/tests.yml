@@ -17,7 +17,7 @@ jobs:
         uses: fedora-python/tox-github-action@v0.4
         with:
           tox_env: ${{ matrix.tox_env }}
-        if: ${{ always() }}  
+        if: ${{ always() }}
     strategy:
       matrix:
         tox_env: [py36, py37, py38, py39]
