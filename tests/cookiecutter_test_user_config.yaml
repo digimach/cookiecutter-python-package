@@ -1,17 +1,17 @@
 ---
 default_context:
-  project_title: "Baked Cookie Test"
-  project_slug: "baked_cookie"
-  project_short_description: "This is a baked cookie for testing"
-  project_author_email: "cookie@baker.com"
-  project_author_name: "Cookie Baker"
-  project_source_url: "cookiedotcom.com/source"
-  project_doc_url: "cookiedotcom.com/doc"
-  install_requires: ""
-  project_extra_dev_requires: "yapf"
-  project_extra_test_requires: "coverage, flake8, pylint, pytest, pytest-cov"
-  project_license: "BSD-3-Clause"
-  project_python_max_version: "3.9"
-  project_python_min_version: "3.6"
-  project_valid_python_versions: "3.6, 3.7, 3.8, 3.9"
-  initialize_git_repo: true
+    project_title: Baked Cookie Test
+    project_slug: baked_cookie
+    project_short_description: This is a baked cookie for testing
+    project_author_email: cookie@baker.com
+    project_author_name: Cookie Baker
+    project_source_url: cookiedotcom.com/source
+    project_doc_url: cookiedotcom.com/doc
+    install_requires: ''
+    project_extra_dev_requires: yapf
+    project_extra_test_requires: coverage, flake8, pylint, pytest, pytest-cov
+    project_license: BSD-3-Clause
+    project_python_max_version: '3.9'
+    project_python_min_version: '3.6'
+    project_valid_python_versions: 3.6, 3.7, 3.8, 3.9
+    initialize_git_repo: true
