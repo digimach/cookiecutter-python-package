@@ -106,14 +106,21 @@ def set_license():
     """
     project_directory = PROJECT_DIRECTORY
     license_file = os.path.join(project_directory, 'LICENSES',
-                                '{{ cookiecutter.project_license }}')
+                                '{{ cookiecutter.project_license }}.rst')
 
     if not os.path.exists(license_file):
         raise IOError(
             'No known license for {{ cookiecutter.project_license }}')
 
-    shutil.move(license_file, os.path.join(project_directory, 'LICENSE'))
+    shutil.move(license_file, os.path.join(project_directory, 'LICENSE.rst'))
     shutil.rmtree(os.path.join(project_directory, 'LICENSES'))
+
+    # Add the title to the LICENSE.rst file
+    with open(os.path.join(project_directory, 'LICENSE.rst'),
+              'r+') as license_fp:
+        content = license_fp.read()
+        license_fp.seek(0, 0)
+        license_fp.write("LICENSE\n#######" + '\n' + content)
 
 
 if __name__ == '__main__':

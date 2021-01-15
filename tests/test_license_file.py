@@ -9,7 +9,7 @@ from . import bake_cookie, load_cookiecutter_json
 def test_license_file_exists(cookies):
     "Check that the LICENSE file exists"
     with bake_cookie(cookies) as result:
-        license_file_path = result.project.join('LICENSE')
+        license_file_path = result.project.join('LICENSE.rst')
         assert os.path.exists(license_file_path)
 
 
@@ -33,14 +33,15 @@ def test_bake_selecting_license(cookies):
                                                  license}) as result:
             if license == 'Proprietary':
                 assert "All rights reserved." in result.project.join(
-                    'LICENSE').readlines()[1]
+                    'LICENSE.rst').readlines()[3]
             else:
-                assert license in result.project.join('LICENSE').readlines()[0]
+                assert license in result.project.join(
+                    'LICENSE.rst').readlines()[2]
 
             assert f"license = {license}" in result.project.join(
                 'setup.cfg').read()
 
-            license_file = result.project.join('LICENSE').read()
+            license_file = result.project.join('LICENSE.rst').read()
             assert str("Cookie Baker") in license_file
             assert str("baker@cookier.com") in license_file
             assert str(now.year) in license_file
