@@ -14,5 +14,4 @@ default_context:
   project_python_max_version: "3.9"
   project_python_min_version: "3.6"
   project_valid_python_versions: "3.6, 3.7, 3.8, 3.9"
-  initialize_git_repo: "yes"
-    
+  initialize_git_repo: true

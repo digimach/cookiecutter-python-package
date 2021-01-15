@@ -1,35 +1,36 @@
+---
 name: tests
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on:  # yamllint disable-line rule:truthy
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
 
 jobs:
-  cookie:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        if: ${{ always() }}
-      - name: Run tox based tests
-        uses: fedora-python/tox-github-action@v0.4
-        with:
-          tox_env: ${{ matrix.tox_env }}
-        if: ${{ always() }}  
-    strategy:
-      matrix:
-        tox_env: [py36, py37, py38, py39]
+    cookie:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              if: ${{ always() }}
+            - name: Run tox based tests
+              uses: fedora-python/tox-github-action@v0.4
+              with:
+                  tox_env: ${{ matrix.tox_env }}
+              if: ${{ always() }}
+        strategy:
+            matrix:
+                tox_env: [py36, py37, py38, py39]
 
-  doc:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        if: ${{ always() }}
-      - name: Run tox based tests
-        uses: fedora-python/tox-github-action@v0.4
-        with:
-          tox_env: docs
-        if: ${{ always() }}
+    doc:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              if: ${{ always() }}
+            - name: Run tox based tests
+              uses: fedora-python/tox-github-action@v0.4
+              with:
+                  tox_env: docs
+              if: ${{ always() }}

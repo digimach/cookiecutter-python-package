@@ -7,11 +7,25 @@
   "project_source_url": "",
   "project_doc_url": "",
   "install_requires": "",
-  "project_extra_dev_requires": "yapf",
-  "project_extra_test_requires": "coverage, flake8, pylint, pytest, pytest-cov",
-  "project_license": [ "BSD-3-Clause", "Proprietary" ],
-  "project_python_max_version": [ "3.9", "3.8", "3.7", "3.6" ],
-  "project_python_min_version": [ "3.6", "3.7", "3.8", "3.9" ],
+  "project_extra_dev_requires": "pre-commit",
+  "project_extra_test_requires": "coverage, pytest, pytest-cov",
+  "project_extra_lint_requires": "flake8, pylint, yamllint, yapf",
+  "project_license": [
+    "BSD-3-Clause",
+    "Proprietary"
+  ],
+  "project_python_max_version": [
+    "3.9",
+    "3.8",
+    "3.7",
+    "3.6"
+  ],
+  "project_python_min_version": [
+    "3.6",
+    "3.7",
+    "3.8",
+    "3.9"
+  ],
   "project_valid_python_versions": "3.6, 3.7, 3.8, 3.9",
   "initialize_git_repo": "yes"
 }
