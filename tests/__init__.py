@@ -17,7 +17,7 @@ def bake_cookie(cookies, *args, **kwargs):
     :param cookies: pytest_cookies.Cookies
     :param (): All other positional args will be passed to cookies.bake call.
     :param (kwargs): All keyword arguments will be passed to cookies.bake call,
-        Caller can overide or add additional context by passing in extra_context
+        Caller can override or add additional context by passing in extra_context
             kwarg.
     """
     extra_context = {
