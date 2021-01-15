@@ -16,7 +16,7 @@ setup-dev :
 # Test rules
 .PHONY: bake
 bake :
-	cookiecutter --overwrite-if-exists --no-input --output-dir ./.baked --config-file ./tests/cookiecutter_test_user_config.yml .
+	cookiecutter --overwrite-if-exists --no-input --output-dir ./.baked --config-file ./tests/cookiecutter_test_user_config.yaml .
 
 .PHONY: pytest
 pytest :
