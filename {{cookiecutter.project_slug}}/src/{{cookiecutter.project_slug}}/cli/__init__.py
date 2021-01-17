@@ -20,15 +20,15 @@ Scenario 1:
   In Python modules/executables:
     from .cli import main
     main.cli()
-  In setup.py or setup.cfg (recomended):
+  In setup.py or setup.cfg (recommended):
     console_scripts =
       my_script = {{ cookiecutter.project_slug }}.cli.main:cli
 
-Scenario 2 (recomended):
+Scenario 2 (recommended):
   In Python modules/executables:
     from . import cli
     cli.main()
-  In setup.py or setup.cfg (recomended):
+  In setup.py or setup.cfg (recommended):
     console_scripts =
       my_script = {{ cookiecutter.project_slug }}.cli:main
 

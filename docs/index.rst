@@ -4,7 +4,7 @@ Welcome to Cookiecutter for Python Packages
 ===========================================
 
 This project aims to provide a structure for new and existing Python projects
-along with a guide on how to complete a project to include tests, 
+along with a guide on how to complete a project to include tests,
 documentation, console scripts (executables), code coverage and helpful
 linters.
 

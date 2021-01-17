@@ -43,12 +43,12 @@ Quickstart
 ==========
 
 This is a short summary of all the components this project provides along with
-basic examples. 
+basic examples.
 
 Usage
 -----
 
-1. Install :code:`cookiecutter` in your Python environment. Ex: 
+1. Install :code:`cookiecutter` in your Python environment. Ex:
    :code:`pip install cookiecutter`
 
 2. Use this template project to generate your project
@@ -60,28 +60,26 @@ Usage
 4. If you want to work in a Git repository for the generated project see
    `Git Repository`_.
 
-.. _`Template Variables`:
-
 Template Variables
 ------------------
 
 * :code:`project_title`: The title of the project that is being created.
 
 * :code:`project_slug`: The slug is used to give the Python package an
-  install name. This should be compliant with `PEP-0008: Package and Module 
+  install name. This should be compliant with `PEP-0008: Package and Module
   Names <https://www.python.org/dev/peps/pep-0008/#package-and-module-names>`_
 
 * :code:`project_short_description`: Project description that will be added
-  to `setup.py <../../{{cookiecutter.project_slug}}/setup.py>`_ and published
+  to `setup.py`_ and published
   with the package.
 
 * :code:`project_author_email`: The author email address that will be used
   for license generation and also published with the package in
-  `setup.py <../../{{cookiecutter.project_slug}}/setup.py>`_
+  `setup.py`_
 
-* :code:`project_author_name`: The author name that will be used for 
+* :code:`project_author_name`: The author name that will be used for
   license generation and also published with the package in
-  `setup.py <../../{{cookiecutter.project_slug}}/setup.py>`_
+  `setup.py`_
 
 * :code:`project_source_url`: HTTP accessible URL that can link to the
   source of the generated project.
@@ -98,12 +96,15 @@ Template Variables
 * :code:`project_extra_test_requires`: List of Python packages, in CSV form,
   that are required to test the generated project.
 
+* :code:`project_extra_lint_requires`: List of Python packages, in CSV form,
+  that are required to lint the generated project.
+
 * :code:`project_python_max_version`: The maximum version of Python the
   project will be supported on.
 
 * :code:`project_python_min_version`: The minimum version of Python the
   project will be supported on. Has to be lesser or equal than
-  :code:`project_python_max_version`. 
+  :code:`project_python_max_version`.
 
 * :code:`project_valid_python_versions`: List of Python versions, in CSV
   form, that are valid. This can be used to define the versions in between
@@ -113,8 +114,6 @@ Template Variables
 * :code:`initialize_git_repo`: If true, will setup a Git repository in the
   generated project and do an initial commit. You can amend the initial
   commit or add on top. See `Git Repository`_ for more information.
-
-.. _`Git Repository`:
 
 Git Repository
 --------------
@@ -142,3 +141,4 @@ the Git repository in your templated project later by doing:
 
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
 .. _YAPF: https://github.com/google/yapf
+.. _setup.py: ../../{{cookiecutter.project_slug}}/setup.py
