@@ -1,0 +1,54 @@
+---
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v2.3.0
+      hooks:
+          - id: check-ast
+            exclude: \{\{cookiecutter.project_slug\}\}
+          - id: check-case-conflict
+          - id: check-yaml
+          - id: check-json
+          - id: check-merge-conflict
+          - id: check-symlinks
+          - id: end-of-file-fixer
+          - id: file-contents-sorter
+            files: .*\.in$
+          - id: mixed-line-ending
+            args: [--fix=lf]
+          - id: no-commit-to-branch
+            args: [--branch, master]
+          - id: pretty-format-json
+            args: [--no-sort-keys, --autofix]
+            files: cookiecutter.json
+          - id: pretty-format-json
+            args: [--autofix]
+            exclude: cookiecutter.json
+          - id: trailing-whitespace
+
+    - repo: https://github.com/codespell-project/codespell
+      rev: master
+      hooks:
+          - id: codespell
+
+    - repo: https://github.com/adrienverge/yamllint.git
+      rev: master
+      hooks:
+          - id: yamllint
+            args: [--format, parsable, --strict]
+
+    - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
+      rev: master
+      hooks:
+          - id: yamlfmt
+
+    - repo: https://github.com/myint/rstcheck
+      rev: master
+      hooks:
+          - id: rstcheck
+            exclude: /?docs/
+
+    - repo: https://github.com/Lucas-C/pre-commit-hooks
+      rev: master
+      hooks:
+          - id: forbid-tabs
+            exclude: (Makefile|make\.bat)

@@ -36,7 +36,7 @@ setup(
     python_requires=">=3.6",
     install_requires=[''],
     extras_require={
-        "dev": [],
+        "dev": ["pre-commit"],
         "docs": ["safety", "sphinx"],
         "test": [
             'cookiecutter', 'coverage', 'flake8', 'gitpython', 'pylint',
