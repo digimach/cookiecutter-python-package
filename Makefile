@@ -2,8 +2,8 @@ PYTEST_FLAGS=
 
 # Clean rules
 .PHONY: clean
-clean : 
-	git clean -dX --force 
+clean :
+	git clean -dX --force
 	rm -rf .baked/
 # -------------------
 
@@ -47,7 +47,7 @@ yapf_check :
 	yapf --recursive --parallel --verbose --diff .
 
 .PHONY: rst_check
-rst_check : 
+rst_check :
 	rst-lint *.rst
 # -------------------
 
@@ -61,7 +61,7 @@ yapf:
 .PHONY: doc_test
 doc_test : doc_dry_run_test doc_link_check
 
-.PHONY: doc_dry_run_test 
+.PHONY: doc_dry_run_test
 doc_dry_run_test :
 	make --directory=./docs SPHINXOPTS="-W -n --keep-going" html
 

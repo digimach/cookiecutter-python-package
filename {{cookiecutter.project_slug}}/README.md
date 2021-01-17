@@ -45,7 +45,7 @@ directly from Python.
 it by invoking `pip install tox`.
 
 * You can also add `<path to place env>/bin/` to your PATH to make use of
-`make` rules outside of `tox`. This is optional but highly recomended.
+`make` rules outside of `tox`. This is optional but highly recommended.
 
 ### Style Guidelines
 
