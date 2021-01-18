@@ -1,11 +1,7 @@
 ---
 name: pre-commit
 
-on:  # yamllint disable-line rule:truthy
-    push:
-        branches: [master]
-    pull_request:
-        branches: [master]
+on: pull_request  # yamllint disable-line rule:truthy
 
 jobs:
     pre-commit:
