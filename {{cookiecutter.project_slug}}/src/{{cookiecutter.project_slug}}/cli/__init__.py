@@ -38,16 +38,17 @@ import importlib
 import pathlib
 import sys
 
-for module in pkgutil.iter_modules(
-        path=[pathlib.Path(__file__).parent.absolute()]):
+for module in pkgutil.iter_modules(path=[pathlib.Path(__file__).parent.absolute()]):
 
     _cli = importlib.import_module(f".{module.name}", package=__name__)
 
     if hasattr(_cli, "cli"):
         setattr(sys.modules[__name__], module.name, _cli.cli)
     else:
-        raise AttributeError(f'"{module.name}" module in cli does not have an'
-                             ' cli attribute, required to interface with'
-                             ' console scripts')
+        raise AttributeError(
+            f'"{module.name}" module in cli does not have an'
+            " cli attribute, required to interface with"
+            " console scripts"
+        )
 
     del _cli

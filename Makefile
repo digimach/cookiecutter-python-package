@@ -32,29 +32,25 @@ test : pytest lint
 
 # Lint Check rules
 .PHONY: lint
-lint : bake flake8_check pylint_check yapf_check rst_check
+lint : bake flake8_check pylint_check black_check
 
 .PHONY: flake8_check
 flake8_check :
-	flake8 --max-line-length=80 --count --statistics *.py hooks .baked/
+	flake8 --max-line-length=88 --count --statistics *.py hooks .baked/
 
 .PHONY: pylint_check
 pylint_check :
 	pylint --jobs 0 --extension-pkg-whitelist ujson,rapidjson *.py hooks .baked/baked_cookie/setup.py .baked/baked_cookie/src/baked_cookie
 
-.PHONY: yapf_check
-yapf_check :
-	yapf --recursive --parallel --verbose --diff .
-
-.PHONY: rst_check
-rst_check :
-	rst-lint *.rst
+.PHONY: black_check
+black_check :
+	black --check --diff --verbose .
 # -------------------
 
 # Formatting related rules
-.PHONY: yapf
-yapf:
-	yapf --recursive --in-place --parallel --verbose .
+.PHONY: black
+black :
+	black --verbose .
 # -------------------
 
 # Documentation Testing rules
