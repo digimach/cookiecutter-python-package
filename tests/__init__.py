@@ -21,17 +21,17 @@ def bake_cookie(cookies, *args, **kwargs):
             kwarg.
     """
     extra_context = {
-        'project_slug': 'baked_cookie',
-        'project_author_name': 'Cookie Baker',
-        'project_author_email': 'baker@cookier.com'
+        "project_slug": "baked_cookie",
+        "project_author_name": "Cookie Baker",
+        "project_author_email": "baker@cookier.com",
     }
 
-    if 'extra_context' not in kwargs.keys():
-        kwargs['extra_context'] = extra_context
-    elif not isinstance(kwargs['extra_context'], dict):
+    if "extra_context" not in kwargs.keys():
+        kwargs["extra_context"] = extra_context
+    elif not isinstance(kwargs["extra_context"], dict):
         raise TypeError('extra_context has to be a type of "dict"')
     else:
-        kwargs['extra_context'].update(extra_context)
+        kwargs["extra_context"].update(extra_context)
 
     result = cookies.bake(*args, **kwargs)
 
@@ -77,8 +77,9 @@ def load_cookiecutter_json():
     """
     Load the cookiecutter.json file and return it as dict
     """
-    cookiecutter_json_file_path = os.path.join(os.path.dirname(__file__),
-                                               os.pardir, 'cookiecutter.json')
+    cookiecutter_json_file_path = os.path.join(
+        os.path.dirname(__file__), os.pardir, "cookiecutter.json"
+    )
     with open(cookiecutter_json_file_path) as fp:
         data = json.load(fp)
 

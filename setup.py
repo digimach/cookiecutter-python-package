@@ -11,8 +11,7 @@ setup(
     url="https://github.com/Digimach/cookiecutter-python-package",
     project_urls={
         "Code": "https://github.com/Digimach/cookiecutter-python-package",
-        "Documentation":
-        "https://github.com/Digimach/cookiecutter-python-package"
+        "Documentation": "https://github.com/Digimach/cookiecutter-python-package",
     },
     license="BSD-3-Clause",
     author="Digimach",
@@ -29,20 +28,31 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3 :: Only"
+        "Programming Language :: Python :: 3 :: Only",
     ],
-    packages=find_packages(exclude=("tests", )),
+    packages=find_packages(exclude=("tests",)),
     include_package_data=True,
     python_requires=">=3.6",
-    install_requires=[''],
+    install_requires=[""],
     extras_require={
         "dev": ["pre-commit"],
         "docs": ["safety", "sphinx"],
         "test": [
-            'cookiecutter', 'coverage', 'flake8', 'gitpython', 'pylint',
-            'pytest', 'pytest-cookies', 'pytest-cov', 'pytest-xdist', 'pyyaml',
-            'restructuredtext-lint', 'safety', 'tox', 'yapf'
-        ]
+            "black",
+            "cookiecutter",
+            "coverage",
+            "flake8",
+            "gitpython",
+            "pylint",
+            "pytest",
+            "pytest-cookies",
+            "pytest-cov",
+            "pytest-xdist",
+            "pyyaml",
+            "restructuredtext-lint",
+            "safety",
+            "tox",
+        ],
     },
     zip_safe=False,
     platforms="any",

@@ -18,8 +18,7 @@ def test_git_repo_is_clean(cookies):
 
 def test_no_git_repo(cookies):
     "Check that Git repo is not created when the option is False"
-    with bake_cookie(cookies, extra_context={'initialize_git_repo':
-                                             "no"}) as result:
+    with bake_cookie(cookies, extra_context={"initialize_git_repo": "no"}) as result:
         assert result.project.isdir()
         with pytest.raises(git.exc.InvalidGitRepositoryError):
             git.Repo(result.project)
