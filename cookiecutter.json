@@ -8,7 +8,7 @@
   "project_doc_url": "",
   "install_requires": "",
   "project_extra_dev_requires": "pre-commit",
-  "project_extra_test_requires": "coverage, pytest, pytest-cov",
+  "project_extra_test_requires": "coverage, pytest, pytest-cov, safety",
   "project_extra_lint_requires": "flake8, pylint, yamllint, yapf",
   "project_license": [
     "BSD-3-Clause",

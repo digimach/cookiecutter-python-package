@@ -15,6 +15,7 @@ with open("src/{{ cookiecutter.project_slug }}/__init__.py", encoding="utf8") as
 
 extra_requires = {
     "dev": {{cookiecutter.project_extra_dev_requires.replace(" ", "").split(",")}},
+    "docs": ["safety", "sphinx"],
     "lint": {{cookiecutter.project_extra_lint_requires.replace(" ", "").split(",")}},
     "test": {{cookiecutter.project_extra_test_requires.replace(" ", "").split(",")}},
 }
