@@ -21,8 +21,11 @@ Cookiecutter Python Package
    :target: https://www.codefactor.io/repository/github/digimach/cookiecutter-python-package
    :alt: CodeFactor
 
-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+.. image:: https://img.shields.io/pypi/l/cookiecutter-python-package
    :target: https://github.com/digimach/cookiecutter-python-package/blob/master/LICENSE.rst
+   :alt: License
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :alt: Code Style
 
 
