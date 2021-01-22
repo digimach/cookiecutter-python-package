@@ -5,8 +5,8 @@ default_context:
     project_short_description: This is a baked cookie for testing
     project_author_email: cookie@baker.com
     project_author_name: Cookie Baker
-    project_source_url: cookiedotcom.com/source
-    project_doc_url: cookiedotcom.com/doc
+    project_source_url: https://google.com/
+    project_doc_url: https://google.com/
     install_requires: ''
     project_extra_dev_requires: yapf
     project_extra_test_requires: coverage, flake8, pylint, pytest, pytest-cov
