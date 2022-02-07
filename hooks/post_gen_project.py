@@ -121,7 +121,9 @@ def set_license():
     shutil.rmtree(os.path.join(project_directory, "LICENSES"))
 
     # Add the title to the LICENSE.rst file
-    with open(os.path.join(project_directory, "LICENSE.rst"), "r+") as license_fp:
+    with open(
+        os.path.join(project_directory, "LICENSE.rst"), "r+", encoding="utf8"
+    ) as license_fp:
         content = license_fp.read()
         license_fp.seek(0, 0)
         license_fp.write("LICENSE\n#######" + "\n" + content)
