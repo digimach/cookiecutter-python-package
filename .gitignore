@@ -10,11 +10,9 @@ __pycache__/
 *$py.class
 
 # Pytest files and directories
-/.pytest_tmp/
 /.pytest_cache/
 
 # IDE files and directories
-/.vscode/
 /.vs/
 
 # Cookiecutter baking directory
@@ -22,3 +20,6 @@ __pycache__/
 
 # Docs build directory
 /docs/_build/
+
+# Build Directory
+/build/

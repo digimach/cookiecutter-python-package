@@ -1,4 +1,0 @@
-.tox
-.git
-.pytest_tmp
-{{cookiecutter.project_slug}}
