@@ -7,4 +7,4 @@ def test_doc_tox_env(cookies):
         subprocess_in_dir(
             "tox -e docs --workdir .tox",
             str(result.project_path),
-        ) == 0
+        )

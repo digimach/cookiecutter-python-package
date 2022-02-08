@@ -9,7 +9,7 @@ import shlex
 import shutil
 import subprocess
 import sys
-from collections import OrderedDict  # noqa pylint: disable=unused-import
+from collections import OrderedDict
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
@@ -36,7 +36,9 @@ def git_commit():
     """
     Commit the staged changes in the generated project.
     """
-
+    cookiecutter_config = (
+        OrderedDict()
+    )  # We init the variable to the same type that will be set in the next line.
     cookiecutter_config = {{cookiecutter}}  # noqa pylint: disable=undefined-variable
 
     cookiecutter_config_str = ""
