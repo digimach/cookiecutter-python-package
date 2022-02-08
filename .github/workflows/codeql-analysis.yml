@@ -16,7 +16,7 @@ on:   # yamllint disable-line rule:truthy
     push:
         branches: [master]
     pull_request:
-    # The branches below must be a subset of the branches above
+        # The branches below must be a subset of the branches above
         branches: [master]
     schedule:
         - cron: 25 10 * * 4
@@ -69,9 +69,9 @@ jobs:
             #    and modify them (or add more) to build your code if your project
             #    uses a compiled language
 
-            #- run: |
-            #   make bootstrap
-            #   make release
+            # - run: |
+            #    make bootstrap
+            #    make release
 
             - name: Perform CodeQL Analysis
               uses: github/codeql-action/analyze@v1
