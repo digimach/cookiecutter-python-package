@@ -4,6 +4,7 @@ This module holds the console script argument schema for the main script of
 """
 import platform
 import sys
+
 import click
 
 from .. import __version__
