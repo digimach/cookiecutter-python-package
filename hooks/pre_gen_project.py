@@ -39,8 +39,7 @@ def check_python_min_max_versions():
     elif str(project_python_max_version) not in project_valid_python_versions:
         print(
             (
-                "** ERROR: Invalid value provided for"
-                ' "project_python_max_version"'
+                '** ERROR: Invalid value provided for "project_python_max_version"'
                 f" {project_python_max_version}."
                 f" Expecting on of: {project_valid_python_versions}"
             )
@@ -49,12 +48,9 @@ def check_python_min_max_versions():
 
     if project_python_min_version > project_python_max_version:
         print(
-            (
-                '** ERROR: "project_python_min_version" (%s) has to be greater'
-                ' than or equal to "project_python_max_version" (%s)'
-            )
-            % project_python_min_version,
-            project_python_max_version,
+            f'** ERROR: "project_python_min_version" {project_python_min_version} has'
+            ' to be greater than or equal to "project_python_max_version"'
+            f" {project_python_max_version}"
         )
         sys.exit(1)
 

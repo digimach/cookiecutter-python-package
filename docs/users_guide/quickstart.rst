@@ -100,4 +100,4 @@ the Git repository in your templated project later by doing:
     git push
 
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
-.. _YPAF: https://github.com/google/yapf
+.. _black: https://github.com/psf/black

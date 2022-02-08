@@ -9,7 +9,7 @@ import shlex
 import shutil
 import subprocess
 import sys
-from collections import OrderedDict  # noqa pylint: disable=unused-import
+from collections import OrderedDict
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
@@ -36,7 +36,9 @@ def git_commit():
     """
     Commit the staged changes in the generated project.
     """
-
+    cookiecutter_config = (
+        OrderedDict()
+    )  # We init the variable to the same type that will be set in the next line.
     cookiecutter_config = {{cookiecutter}}  # noqa pylint: disable=undefined-variable
 
     cookiecutter_config_str = ""
@@ -121,7 +123,9 @@ def set_license():
     shutil.rmtree(os.path.join(project_directory, "LICENSES"))
 
     # Add the title to the LICENSE.rst file
-    with open(os.path.join(project_directory, "LICENSE.rst"), "r+") as license_fp:
+    with open(
+        os.path.join(project_directory, "LICENSE.rst"), "r+", encoding="utf8"
+    ) as license_fp:
         content = license_fp.read()
         license_fp.seek(0, 0)
         license_fp.write("LICENSE\n#######" + "\n" + content)

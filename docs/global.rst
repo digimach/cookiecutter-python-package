@@ -1,2 +1,2 @@
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
-.. _YPAF: https://github.com/google/yapf
+.. _Black: https://github.com/psf/black

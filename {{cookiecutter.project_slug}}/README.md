@@ -49,11 +49,10 @@ it by invoking `pip install tox`.
 
 ### Style Guidelines
 
-* This project follows
-[Google Python Style Guide](http://google.github.io/styleguide/pyguide.html).
-* Using [yapf](https://github.com/google/yapf/) the code should be formatted to
-ensure consistent code structure between developers. The `yapf` make rule can
-be used to format the code by running `make yapf`.
+* This project uses [Black](https://github.com/psf/black) to format Python code.
+* Using `black` the code should be formatted to ensure consistent code structure between
+developers. The `black` make rule can be used to format the code by running
+`make black`.
 
 ### Testing
 

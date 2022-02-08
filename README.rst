@@ -44,7 +44,7 @@ The following features apply to the template project of this Cookiecutter:
 * Tox testing: Test against multiple Python versions (3.6+)
 * Development: Easily setup a development environment using Tox
 * Makefile: Predefined make rules to build, test, lint and deploy
-* YAPF_ Formatting: Have your Python code formatted in a consistent manner
+* Black_ Formatting: Have your Python code formatted in a consistent manner
 
 Quickstart
 ==========
@@ -147,5 +147,5 @@ the Git repository in your templated project later by doing:
     git push
 
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
-.. _YAPF: https://github.com/google/yapf
+.. _Black: https://github.com/psf/black
 .. _setup.py: ../../{{cookiecutter.project_slug}}/setup.py
