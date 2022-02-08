@@ -2,6 +2,7 @@
 CODE_OF_CONDUCT file testing module for the generated project.
 """
 import os
+
 from . import bake_cookie, load_cookiecutter_json
 
 

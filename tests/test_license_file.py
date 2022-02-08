@@ -3,6 +3,7 @@ License file testing module for the generated project.
 """
 import datetime
 import os
+
 from . import bake_cookie, load_cookiecutter_json
 
 

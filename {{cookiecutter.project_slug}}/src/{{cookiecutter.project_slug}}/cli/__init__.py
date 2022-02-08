@@ -33,9 +33,9 @@ Scenario 2 (recommended):
       my_script = {{ cookiecutter.project_slug }}.cli:main
 
 """
-import pkgutil
 import importlib
 import pathlib
+import pkgutil
 import sys
 
 for module in pkgutil.iter_modules(path=[pathlib.Path(__file__).parent.absolute()]):
