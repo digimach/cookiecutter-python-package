@@ -20,6 +20,8 @@ jobs:
           architecture: x64
       - name: Run tox based tests on py${{ matrix.python-version }}
         run: |
+          pip install tox
+          pip install --upgrade pip
           tox -e $(echo "py${{ matrix.python-version }}" | tr -d ".")
     strategy:
       matrix:
@@ -37,4 +39,6 @@ jobs:
           architecture: x64
       - name: Run tox based tests
         run: |
+          pip install tox
+          pip install --upgrade pip
           tox -e docs
