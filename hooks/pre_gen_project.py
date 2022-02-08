@@ -12,7 +12,6 @@ def check_python_min_max_versions():
     Check to make sure project_python_min_version and
     project_python_max_version are valid.
     """
-
     # fmt: off
     project_python_min_version = {{ cookiecutter.project_python_min_version }}  # noqa pylint: disable=undefined-variable
     project_python_max_version = {{ cookiecutter.project_python_max_version }}  # noqa pylint: disable=undefined-variable
