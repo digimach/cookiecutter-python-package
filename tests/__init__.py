@@ -26,7 +26,7 @@ def bake_cookie(cookies, *args, **kwargs):
         "project_author_email": "baker@cookier.com",
     }
 
-    if "extra_context" not in kwargs.keys():
+    if "extra_context" not in kwargs:
         kwargs["extra_context"] = extra_context
     elif not isinstance(kwargs["extra_context"], dict):
         raise TypeError('extra_context has to be a type of "dict"')
