@@ -1,8 +1,8 @@
 version = 1
 
 test_patterns = [
-    "tests/**",
-    "{{cookiecutter.project_slug}}/tests/**"
+  "tests/**",
+  "{{cookiecutter.project_slug}}/tests/**"
 ]
 
 [[analyzers]]
@@ -14,4 +14,8 @@ enabled = true
 
 [[transformers]]
 name = "black"
+enabled = true
+
+[[transformers]]
+name = "isort"
 enabled = true
