@@ -2,43 +2,43 @@
 name: tests
 
 on: # yamllint disable-line rule:truthy
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
 
 jobs:
-  cookie:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
-          architecture: x64
-      - name: Run tox based tests on py${{ matrix.python-version }}
-        run: |
-          pip install tox
-          pip install --upgrade pip
-          tox -e $(echo "py${{ matrix.python-version }}" | tr -d ".")
-    strategy:
-      matrix:
-        python-version: ["3.6", "3.7", "3.8", "3.9"]
+    cookie:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                  python-version: ${{ matrix.python-version }}
+                  architecture: x64
+            - name: Run tox based tests on py${{ matrix.python-version }}
+              run: |
+                  pip install tox
+                  pip install --upgrade pip
+                  tox -e $(echo "py${{ matrix.python-version }}" | tr -d ".")
+        strategy:
+            matrix:
+                python-version: ['3.6', '3.7', '3.8', '3.9']
 
-  doc:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.9"
-          architecture: x64
-      - name: Run tox based tests
-        run: |
-          pip install tox
-          pip install --upgrade pip
-          tox -e docs
+    doc:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                  python-version: '3.9'
+                  architecture: x64
+            - name: Run tox based tests
+              run: |
+                  pip install tox
+                  pip install --upgrade pip
+                  tox -e docs
