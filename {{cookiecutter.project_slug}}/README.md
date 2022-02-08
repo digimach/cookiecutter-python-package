@@ -51,7 +51,7 @@ it by invoking `pip install tox`.
 
 * This project uses [Black](https://github.com/psf/black) to format Python code.
 * Using `black` the code should be formatted to ensure consistent code structure between
-developers. The `black` make rule can be used to format the code by running 
+developers. The `black` make rule can be used to format the code by running
 `make black`.
 
 ### Testing
