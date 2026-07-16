@@ -8,6 +8,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - uses: actions/setup-python@v2
+            - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
             - uses: pre-commit/action@v2.0.0
         if: ${{ always() }}
